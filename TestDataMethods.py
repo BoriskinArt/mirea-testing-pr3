@@ -1,39 +1,39 @@
 import unittest
 import main
- 
- 
+
+
 class TestDataMethods(unittest.TestCase):
     def test_convert_km_to_m(self):
         self.assertEqual(main.Data(1).convert_km_to_m(), 1000)
         self.assertEqual(main.Data(-1).convert_km_to_m(), 0)
- 
+
     def test_convert_km_to_dm(self):
         self.assertEqual(main.Data(1).convert_km_to_dm(), 100)
- 
+
     def test_convert_km_to_cm(self):
         self.assertEqual(main.Data(1).convert_km_to_cm(), 100000)
- 
+
     def test_convert_km_to_mm(self):
         self.assertEqual(main.Data(1).convert_km_to_mm(), 1000000)
- 
+
     def test_convert_m_to_km(self):
         self.assertEqual(main.Data(1000).convert_m_to_km(), 1)
- 
+
     def test_convert_m_to_dm(self):
         self.assertEqual(main.Data(1000).convert_m_to_dm(), 10000)
- 
+
     def test_convert_m_to_cm(self):
         self.assertEqual(main.Data(1).convert_m_to_cm(), 100)
- 
+
     def test_convert_m_to_mm(self):
         self.assertEqual(main.Data(1).convert_m_to_mm(), 1000)
- 
+
     def test_convert_dm_to_km(self):
         self.assertEqual(main.Data(10000).convert_dm_to_km(), 1)
- 
+
     def test_convert_dm_to_m(self):
         self.assertEqual(main.Data(10).convert_dm_to_m(), 1)
- 
+
     def test_convert_dm_to_cm(self):
         self.assertEqual(main.Data(1).convert_dm_to_cm(), 10)
 
@@ -75,6 +75,39 @@ class TestDataMethods(unittest.TestCase):
 
     def test_convert_ft_to_mm(self):
         self.assertEqual(main.Data(1).convert_ft_to_mm(), 304.8)
+
+    def test_convert_dm_to_mm(self):
+        self.assertEqual(main.Data(1).convert_dm_to_mm(), 100)
+
+    def test_convert_cm_to_km(self):
+        self.assertEqual(main.Data(100000).convert_cm_to_km(), 1)
+
+    def test_convert_cm_to_dm(self):
+        self.assertEqual(main.Data(10).convert_cm_to_dm(), 1)
+
+    def test_convert_cm_to_m(self):
+        self.assertEqual(main.Data(100).convert_cm_to_m(), 1)
+
+    def test_convert_cm_to_mm(self):
+        self.assertEqual(main.Data(1).convert_cm_to_mm(), 10)
+
+    def test_convert_mm_to_km(self):
+        self.assertEqual(main.Data(1000000).convert_mm_to_km(), 1)
+
+    def test_convert_mm_to_m(self):
+        self.assertEqual(main.Data(1000).convert_mm_to_m(), 1)
+
+    def test_convert_mm_to_dm(self):
+        self.assertEqual(main.Data(100).convert_mm_to_dm(), 1)
+
+    def test_convert_mm_to_cm(self):
+        self.assertEqual(main.Data(10).convert_mm_to_cm(), 1)
+
+    def test_convert_miles_to_km(self):
+        self.assertEqual(main.Data(1).convert_miles_to_km(), 1.61)
+
+    def test_convert_miles_to_m(self):
+        self.assertEqual(main.Data(1).convert_miles_to_m(), 1609.34)
 
 
 if __name__ == '__main__':
